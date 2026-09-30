@@ -30,6 +30,8 @@ Omarchy's bar.
 omarchy plugin add https://github.com/lunanoir21/desktop-widget-control-omarchy.git --enable
 ```
 
+> **Don't forget the keybind.** The plugin adds no key on its own, and without one there is no way to open the editor. Bind one (below); the first-run tour also offers to add it for you.
+
 There is nothing else to build: it is plain QML with bundled fonts, and it downloads nothing
 except the weather forecast if you add the weather widget. A short tour opens on the first
 start; it can be skipped.
