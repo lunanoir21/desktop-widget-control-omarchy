@@ -16,7 +16,7 @@ cava spectrum, calendar, weather, pomodoro, notes), nine themes, Turkish and Eng
 
 This repo is a thin wrapper. All behaviour lives upstream; the `desktop-widget-control/`
 directory here is a vendored, pinned copy of its `ui/` (currently `v0.1.0`, commit
-`152320a42e7efd72f0c85dab3d455f96bec3c668`), and `Service.qml` is what Omarchy's plugin loader needs to start it. Nothing is
+`14a1596c037426ab660b6c0945bed305bc1e68a6`), and `Service.qml` is what Omarchy's plugin loader needs to start it. Nothing is
 developed here.
 
 `manifest.json` declares `kinds: ["service"]` with `keepLoaded: true`, the same shape as
