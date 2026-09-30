@@ -16,7 +16,7 @@ cava spectrum, calendar, weather, pomodoro, notes), nine themes, Turkish and Eng
 
 This repo is a thin wrapper. All behaviour lives upstream; the `desktop-widget-control/`
 directory here is a vendored, pinned copy of its `ui/` (currently `v0.1.1`, commit
-`f55bc606cceecc5c2ac2be159c45b94776f7fdbe`), and `Service.qml` is what Omarchy's plugin loader needs to start it. Nothing is
+`c71d89b948c42e922b1b55a1d45e3213088cde4e`), and `Service.qml` is what Omarchy's plugin loader needs to start it. Nothing is
 developed here.
 
 `manifest.json` declares `kinds: ["service"]` with `keepLoaded: true`, the same shape as
@@ -34,7 +34,7 @@ There is nothing else to build: it is plain QML with bundled fonts, and it downl
 except the weather forecast if you add the weather widget. A short tour opens on the first
 start; it can be skipped.
 
-Open the editor with a key:
+The first-run tour offers to add a key for the editor (`SUPER + G`, or the first free one like it) and on yes writes it into your `bindings.conf` / `bindings.lua` (`ui/scripts/bind.sh`, which you can also run yourself). To do it by hand:
 
 ```
 bind = SUPER, G, exec, qs ipc call desktopWidgets toggle
