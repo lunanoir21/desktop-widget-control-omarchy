@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "io.github.lunanoir21.desktop-widget-control",
   "name": "Desktop Widget Control",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "lunanoir21",
   "license": "MIT",
   "description": "Live desktop widgets with a full editor for Omarchy — clocks, system monitors, a music player with a live spectrum, calendar and weather, placed and styled on the desktop, in nine themes.",
