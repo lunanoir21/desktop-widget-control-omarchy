@@ -49,7 +49,7 @@ bind = SUPER, G, exec, qs ipc call desktopWidgets toggle
   (only while a widget needs them), the playing track over MPRIS, and `cava` output if
   `cava` is installed.
 - **AI limits widget** (only if you add it): reads the newest rate-limit line in `~/.codex/sessions`, and a status line capture in `~/.local/state/desktop-widget-control/` if you set that up (`ui/scripts/claude-statusline.sh`, which only saves what Claude Code pipes to it). A switch that is **off by default**, "Claude: official API", additionally reads the token in `~/.claude/.credentials.json` (never sent when expired, passed to `curl` on stdin) and asks `api.anthropic.com/api/oauth/usage` every five minutes.
-- **Network:** the weather widget asks Open-Meteo for a forecast and a city search; the AI limits widget, only with that switch on, asks api.anthropic.com. Every request goes through one helper: HTTPS only, a time limit and a 128 KiB cap on the answer.
+- **Network:** the weather widget asks Open-Meteo for a forecast and a city search; the AI limits widget, only with that switch on, asks api.anthropic.com. Every request is HTTPS only, with a time limit and a size cap on the answer (128 KiB for the weather requests, 64 KiB for the usage one).
 - **Writes** its layout to `~/.config/desktop-widget-control/layout.json` and a cava config
   under `$XDG_RUNTIME_DIR`. It never touches `~/.config/omarchy/shell.json` or any other
   configuration.
