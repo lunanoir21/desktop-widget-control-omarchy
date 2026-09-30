@@ -15,8 +15,8 @@ style them — sixteen modules (six clocks, five system monitors, a music player
 cava spectrum, calendar, weather, pomodoro, notes), nine themes, Turkish and English.
 
 This repo is a thin wrapper. All behaviour lives upstream; the `desktop-widget-control/`
-directory here is a vendored, pinned copy of its `ui/` (currently `v0.1.3`, commit
-`be4222fec6f73a319bae917fe54402c1051bd7b4`), and `Service.qml` is what Omarchy's plugin loader needs to start it. Nothing is
+directory here is a vendored, pinned copy of its `ui/` (currently `v0.2.0`, commit
+`9f6f32d87bb8f786d0fdf8477be7b95d4fb64496`), and `Service.qml` is what Omarchy's plugin loader needs to start it. Nothing is
 developed here.
 
 `manifest.json` declares `kinds: ["service"]` with `keepLoaded: true`, the same shape as
@@ -48,7 +48,8 @@ bind = SUPER, G, exec, qs ipc call desktopWidgets toggle
 - **Reads** CPU, memory, network, disk and temperature counters from `/proc` and `/sys`
   (only while a widget needs them), the playing track over MPRIS, and `cava` output if
   `cava` is installed.
-- **Network:** only the weather widget, which asks Open-Meteo for a forecast and a city search.
+- **AI limits widget** (only if you add it): reads the newest rate-limit line in `~/.codex/sessions`, and a status line capture in `~/.local/state/desktop-widget-control/` if you set that up (`ui/scripts/claude-statusline.sh`, which only saves what Claude Code pipes to it). A switch that is **off by default**, "Claude: official API", additionally reads the token in `~/.claude/.credentials.json` (never sent when expired, passed to `curl` on stdin) and asks `api.anthropic.com/api/oauth/usage` every five minutes.
+- **Network:** the weather widget asks Open-Meteo for a forecast and a city search; the AI limits widget, only with that switch on, asks api.anthropic.com. Every request goes through one helper: HTTPS only, a time limit and a 128 KiB cap on the answer.
 - **Writes** its layout to `~/.config/desktop-widget-control/layout.json` and a cava config
   under `$XDG_RUNTIME_DIR`. It never touches `~/.config/omarchy/shell.json` or any other
   configuration.
