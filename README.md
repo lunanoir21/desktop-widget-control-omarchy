@@ -15,8 +15,8 @@ style them — sixteen modules (six clocks, five system monitors, a music player
 cava spectrum, calendar, weather, pomodoro, notes), nine themes, Turkish and English.
 
 This repo is a thin wrapper. All behaviour lives upstream; the `desktop-widget-control/`
-directory here is a vendored, pinned copy of its `ui/` (currently `v0.2.0`, commit
-`9f6f32d87bb8f786d0fdf8477be7b95d4fb64496`), and `Service.qml` is what Omarchy's plugin loader needs to start it. Nothing is
+directory here is a vendored, pinned copy of its `ui/` (currently `v0.2.1`, commit
+`dc254550b6cd665dfb30982c646acb983ef6091d`), and `Service.qml` is what Omarchy's plugin loader needs to start it. Nothing is
 developed here.
 
 `manifest.json` declares `kinds: ["service"]` with `keepLoaded: true`, the same shape as
