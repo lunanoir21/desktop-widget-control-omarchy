@@ -1,5 +1,9 @@
 # Desktop Widget Control for Omarchy
 
+![built with Claude Code](https://img.shields.io/badge/built%20with-Claude%20Code-D97757)
+![AI-assisted](https://img.shields.io/badge/AI--assisted-yes-e6edf3)
+![directed by human](https://img.shields.io/badge/directed%20by-human-3d444d)
+
 > **This repo is only packaging.** The project itself lives at
 > **[lunanoir21/desktop-widget-control](https://github.com/lunanoir21/desktop-widget-control)** —
 > source, [changelog](https://github.com/lunanoir21/desktop-widget-control/blob/main/CHANGELOG.md),
@@ -23,6 +27,9 @@ developed here.
 Omarchy's built-in `background`, `lock` and `notifications` plugins. The widgets sit on the
 desktop's bottom layer and the editor is a full-screen overlay, so nothing needs a place in
 Omarchy's bar.
+
+> [!IMPORTANT]
+> **Built with AI.** This project was largely written with [Claude Code](https://claude.com/claude-code). The ideas, design decisions, testing and final review are mine.
 
 ## Install
 
